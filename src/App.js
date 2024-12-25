@@ -7,6 +7,8 @@ import About from "./components/About";
 import Courses from "./components/Courses";
 import Contact from "./components/Contact";
 import FAQ from "./components/FAQ";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 const App = () => {
   return (
