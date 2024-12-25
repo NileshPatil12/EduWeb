@@ -8,7 +8,7 @@ class Navbar extends Component {
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
           <div className="container">
             <Link to="/" className="navbar-brand text-white fw-bold">
-              EduLearn
+              EdTechLearn
             </Link>
             <button
               className="navbar-toggler"
