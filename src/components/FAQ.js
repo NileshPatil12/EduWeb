@@ -42,7 +42,7 @@ class FAQ extends Component {
     ];
 
     return (
-      <div className="container mt-5">
+      <div className="container mt-5 mb-5">
         <h2 className="text-center mb-4">Frequently Asked Questions</h2>
         <div>
           {faqs.map((faq, index) => (

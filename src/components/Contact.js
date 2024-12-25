@@ -41,7 +41,7 @@ class Contact extends Component {
   render() {
     console.log("render: About Component is being rendered.");
     return (
-      <div className="container mt-5">
+      <div className="container mt-5 mb-5">
         <h2 className="text-center mb-4">Contact Us</h2>
         <div className="row">
           {/* Contact Information */}

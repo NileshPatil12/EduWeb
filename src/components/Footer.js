@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class Footer extends Component {
   constructor(props) {
@@ -17,69 +18,97 @@ class Footer extends Component {
   componentWillUnmount() {
     console.log("componentWillUnmount: Footer Component is about to be removed from the DOM.");
   }
+
+  handleLinkClick = () => {
+    window.scrollTo(0, 0); // Scroll to the top of the page
+  };
+
   render() {
     return (
-      <footer className="text-center bg-dark text-white py-5">
+      <footer
+        className="py-5"
+        style={{
+          backgroundColor: "#1c1c1c", // Darker, clean background
+          color: "#eaeaea", // Softer text color for readability
+        }}
+      >
         <div className="container">
-          {/* Main footer content */}
+          {/* Logo and Brief Section */}
           <div className="row mb-4">
-            <div className="col-md-4">
-              <h5>About Us</h5>
+            <div className="col-lg-4 col-md-6 mb-4">
+              <h4 className="fw-bold text-light">EduLearn</h4>
               <p>
-                EduLearn is an online platform offering a wide range of courses designed to help students grow academically and professionally.
+                Empowering learners worldwide with high-quality, accessible
+                education. Grow academically and professionally with us.
               </p>
             </div>
-            <div className="col-md-4">
-              <h5>Quick Links</h5>
+
+            {/* Links Section */}
+            <div className="col-lg-4 col-md-6 mb-4">
+              <h5 className="fw-bold text-light">Quick Links</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#home" className="text-white">Home</a>
+                  <Link to="/" className="text-light footer-link" onClick={this.handleLinkClick}>
+                    Home
+                  </Link>
                 </li>
                 <li>
-                  <a href="#courses" className="text-white">Courses</a>
+                  <Link to="/courses" className="text-light footer-link" onClick={this.handleLinkClick}>
+                    Courses
+                  </Link>
                 </li>
                 <li>
-                  <a href="#about" className="text-white">About</a>
+                  <Link to="/about" className="text-light footer-link" onClick={this.handleLinkClick}>
+                    About
+                  </Link>
                 </li>
                 <li>
-                  <a href="#contact" className="text-white">Contact</a>
+                  <Link to="/contact" className="text-light footer-link" onClick={this.handleLinkClick}>
+                    Contact
+                  </Link>
                 </li>
                 <li>
-                  <a href="#faq" className="text-white">FAQ</a>
+                  <Link to="/faq" className="text-light footer-link" onClick={this.handleLinkClick}>
+                    FAQ
+                  </Link>
                 </li>
               </ul>
             </div>
-            <div className="col-md-4">
-              <h5>Contact Us</h5>
+
+            {/* Contact Section */}
+            <div className="col-lg-4 col-md-12 mb-4">
+              <h5 className="fw-bold text-light">Contact Us</h5>
               <p>
-                Email: <a href="mailto:info@edulearn.com" className="text-white">info@edulearn.com</a>
+                Email:{" "}
+                <a href="mailto:nileshpatil3052@gmail.com" className="text-light">
+                  nileshpatil3052@gmail.com
+                </a>
               </p>
-              <p>Phone: +1 (123) 456-7890</p>
+              <p>Phone: +91 9359541340</p>
             </div>
           </div>
 
-          {/* Social media links */}
-          <div className="social-media mb-4">
-            <a href="https://facebook.com" className="text-white mr-3">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com" className="text-white mr-3">
-              <i className="fab fa-twitter"></i>
-            </a>
-            <a href="https://linkedin.com" className="text-white mr-3">
-              <i className="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://instagram.com" className="text-white mr-3">
-              <i className="fab fa-instagram"></i>
-            </a>
-          </div>
+          {/* Horizontal Divider */}
+          <hr style={{ borderColor: "#555" }} />
 
-          {/* Footer bottom */}
-          <div className="footer-bottom">
-            <p>&copy; 2024 EduLearn. All rights reserved.</p>
-            <div>
-              <a href="/privacy-policy" className="text-white mr-3">Privacy Policy</a>
-              <a href="/terms-of-service" className="text-white">Terms of Service</a>
+          {/* Social Media Section */}
+          <div className="row align-items-center text-center">
+            <div className="col-md-6 text-md-start mb-3 mb-md-0">
+              <p>&copy; 2024 EduLearn. All rights reserved.</p>
+            </div>
+            <div className="col-md-6 text-md-end">
+              <a href="https://facebook.com" className="text-light me-3" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com" className="text-light me-3" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="https://linkedin.com" className="text-light me-3" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://instagram.com" className="text-light" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-instagram"></i>
+              </a>
             </div>
           </div>
         </div>
